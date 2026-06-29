@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-md-6">
+
+        <div class="card border-danger shadow">
+
+            <div class="card-header bg-danger text-white">
+
+                <h3 class="mb-0">
+
+                    🗑️ Elimina Evento
+
+                </h3>
+
+            </div>
+
+            <div class="card-body">
+
+                <p>
+
+                    Sei sicuro di voler eliminare questo evento?
+
+                </p>
+
+                <h4>
+
+                    {{ event.title }}
+
+                </h4>
+
+                <form method="post">
+
+                    {% csrf_token %}
+
+                    <button
+                        type="submit"
+                        class="btn btn-danger">
+
+                        Conferma Eliminazione
+
+                    </button>
+
+                    <a
+                        href="{% url 'home' %}"
+                        class="btn btn-secondary">
+
+                        Annulla
+
+                    </a>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

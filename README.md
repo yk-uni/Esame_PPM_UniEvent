@@ -104,7 +104,7 @@ admin_demo
 Password:
 
 ```
-admin12345
+Admin2026!
 ```
 
 ### Organizer
